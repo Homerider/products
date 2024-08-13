@@ -1,27 +1,34 @@
+// Отображение названий продуктов
+// Получите все продукты и вывести их названия на консоль. Решение-1
+let inventory = [
+    {id: 1, name: "Apple", price: 0.50, quantity: 200},
+    {id: 2, name: "Banana", price: 0.30, quantity: 150},
+    {id: 3, name: "Cherry", price: 0.90, quantity: 50}
+]
+for (let i = 0; i < inventory.length; i++) {
+    console.log(`Продукты на складе: ${inventory[i].name}`)
+}
+
 
 // Отображение названий продуктов
-// Получите все продукты и вывести их названия на консоль.
-//
-//     Обновление инвентаря
-// Напишите функцию updateInventory(productId, amount),
-//     которая обновляет количество определенного ID товара.
-//     Сумма может быть положительной (добавление к инвентарю)
-// или отрицательной (вычитание из инвентаря).
-// Убедитесь, что функция не позволяет инвентарю опуститься ниже 0.
-//
-// Поиск товаров с низким запасом
-// Напишите функцию findLowStock(threshold), которая возвращает массив
-// названий товаров, количество которых ниже определенного порога.
-//     Используйте Object.entries() для работы с идентификатором и данными
-// каждого товара.
-//
-//     Вычислить общую стоимость запасов
-// Напишите функцию totalInventoryValue(),
-//     которая вычисляет и возвращает общую стоимость запасов.
-//     Умножьте цену каждого товара на его количество и сложите эти значения.
-
+// Получите все продукты и вывести их названия на консоль. Решение-2
 let inventory = [
-    { id: 1, name: "Apple", price: 0.50, quantity: 200 },
-    { id: 2, name: "Banana", price: 0.30, quantity: 150 },
-    { id: 3, name: "Cherry", price: 0.90, quantity: 50 }
+    {id: 1, name: "Apple", price: 0.50, quantity: 200},
+    {id: 2, name: "Banana", price: 0.30, quantity: 150},
+    {id: 3, name: "Cherry", price: 0.90, quantity: 50}
 ]
+let allProducts = inventory.map(i => {
+    return i.name
+})
+console.log(`Продукты на складе: ${allProducts}`)
+
+
+// Отображение названий продуктов
+// Получите все продукты и вывести их названия на консоль. Решение-3
+let inventory = [
+    {id: 1, name: "Apple", price: 0.50, quantity: 200},
+    {id: 2, name: "Banana", price: 0.30, quantity: 150},
+    {id: 3, name: "Cherry", price: 0.90, quantity: 50}
+]
+let allProductNames = inventory.map(products => products.name).join(`, `)
+console.log(`Продукты на складе: ${allProductNames}`)
